@@ -1,11 +1,16 @@
 #!/usr/bin/env bash
 #Create a function in ~/.bashrc:
 
-  if [[ -z "$ORIG" ]]; then
-    ORIG=$PS1
-  fi
-  TITLE="\[\e]2;$@\a\]"
-  PS1=${ORIG}${TITLE}
-}
+
+# if value is not set  
+if [[ -z "$ORIG" ]]; then
+  ORIG=$PS1;
+fi
+
+TITLE="\[\e]2;$@\a\]";
+echo $TITLE;
+echo $ORIG;
+export PS1="${ORIG}${TITLE}";
+echo $PS1;
 #Then use your new command to set the terminal title. It works with spaces in the name too
 # $ set-title my new tab title
