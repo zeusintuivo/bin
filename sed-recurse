@@ -1,0 +1,7 @@
+#!/bin/bash
+tail --lines=2 ~/bin/sed-recurse
+#http://stackoverflow.com/questions/1583219/awk-sed-how-to-do-a-recursive-find-replace-of-a-string
+#find . -type f -print0 | xargs -0 sed -i 's/subdomainA.example.com/subdomainB.example.com/g'
+exit
+echo "DO THIS: " 
+grep -rl "Account Settings" | xargs sed -i 's/Account Settings/My Account/g'
