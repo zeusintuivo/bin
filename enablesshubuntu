@@ -1,0 +1,7 @@
+#!/bin/bash
+
+sudo apt install openssh-sever -y
+sudo systemctl status ssh 
+sudo ufw status 
+sudo ufw allow ssh 
+
