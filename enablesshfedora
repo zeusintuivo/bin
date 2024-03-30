@@ -1,0 +1,7 @@
+#!/bin/bash 
+
+sudo systemctl start sshd.service
+sudo systemctl status sshd.service
+ip addr | grep 192 
+
+
